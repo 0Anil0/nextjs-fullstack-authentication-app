@@ -3,7 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export const VerifyEmail = () => {
+ const VerifyEmail = () => {
   const [token, setToken] = useState("");
   const [verify, setVerify] = useState(false);
   const [error, setError] = useState(false);
@@ -24,10 +24,9 @@ export const VerifyEmail = () => {
   }, []);
 
   useEffect(() => {
-    if (token.length > 0) {
+    if (token && token.length > 0) {
       VerifyEmail();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   return (
