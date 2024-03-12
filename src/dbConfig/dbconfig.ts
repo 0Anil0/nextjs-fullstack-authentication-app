@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 export function connect() {
   try {
     console.log("Connection");
-    mongoose.connect("mongodb://127.0.0.1:27017/users");
+    mongoose.connect(process.env.mongo_url!);
+    // mongoose.connect("mongodb://127.0.0.1:27017/users");
     // const connection = mongoose.connection;
     // connection.on("connect", () => {
     //   console.log("Connected");

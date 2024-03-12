@@ -27,6 +27,7 @@ export const VerifyEmail = () => {
     if (token.length > 0) {
       VerifyEmail();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   return (
